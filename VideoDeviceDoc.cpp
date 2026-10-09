@@ -1,4 +1,4 @@
-?#include "stdafx.h"
+﻿#include "stdafx.h"
 #include "uImager.h"
 #include "VideoDeviceView.h"
 #include "MainFrm.h"
@@ -4182,96 +4182,96 @@ CString CVideoDeviceDoc::GetValidName(CString sName)
 			 c == _T('(') || c == _T(')'))
 			sValidName += c;
 		// a family
-		else if (c == _T('�'))
+		else if (c == _T('ä'))
 			sValidName += _T("ae");
-		else if (c == _T('�'))
+		else if (c == _T('Ä'))
 			sValidName += _T("AE");
-		else if (c == _T('�'))
+		else if (c == _T('à'))
 			sValidName += _T("a");
-		else if (c == _T('A'))
+		else if (c == _T('À'))
 			sValidName += _T("A");
-		else if (c == _T('�'))
+		else if (c == _T('á'))
 			sValidName += _T("a");
-		else if (c == _T('A'))
+		else if (c == _T('Á'))
 			sValidName += _T("A");
-		else if (c == _T('�'))
+		else if (c == _T('â'))
 			sValidName += _T("a");
-		else if (c == _T('A'))
+		else if (c == _T('Â'))
 			sValidName += _T("A");
-		else if (c == _T('�'))
+		else if (c == _T('å'))
 			sValidName += _T("a");
-		else if (c == _T('�'))
+		else if (c == _T('Å'))
 			sValidName += _T("A");
 		// e family
-		else if (c == _T('�'))
+		else if (c == _T('è'))
 			sValidName += _T("e");
-		else if (c == _T('E'))
+		else if (c == _T('È'))
 			sValidName += _T("E");
-		else if (c == _T('�'))
+		else if (c == _T('é'))
 			sValidName += _T("e");
-		else if (c == _T('�'))
+		else if (c == _T('É'))
 			sValidName += _T("E");
-		else if (c == _T('�'))
+		else if (c == _T('ê'))
 			sValidName += _T("e");
-		else if (c == _T('E'))
+		else if (c == _T('Ê'))
 			sValidName += _T("E");
 		// i family
-		else if (c == _T('�'))
+		else if (c == _T('ì'))
 			sValidName += _T("i");
-		else if (c == _T('I'))
+		else if (c == _T('Ì'))
 			sValidName += _T("I");
-		else if (c == _T('�'))
+		else if (c == _T('í'))
 			sValidName += _T("i");
-		else if (c == _T('I'))
+		else if (c == _T('Í'))
 			sValidName += _T("I");
-		else if (c == _T('�'))
+		else if (c == _T('î'))
 			sValidName += _T("i");
-		else if (c == _T('I'))
+		else if (c == _T('Î'))
 			sValidName += _T("I");
 		// o family
-		else if (c == _T('�'))
+		else if (c == _T('ö'))
 			sValidName += _T("oe");
-		else if (c == _T('�'))
+		else if (c == _T('Ö'))
 			sValidName += _T("OE");
-		else if (c == _T('�'))
+		else if (c == _T('ò'))
 			sValidName += _T("o");
-		else if (c == _T('O'))
+		else if (c == _T('Ò'))
 			sValidName += _T("O");
-		else if (c == _T('�'))
+		else if (c == _T('ó'))
 			sValidName += _T("o");
-		else if (c == _T('O'))
+		else if (c == _T('Ó'))
 			sValidName += _T("O");
-		else if (c == _T('�'))
+		else if (c == _T('ô'))
 			sValidName += _T("o");
-		else if (c == _T('O'))
+		else if (c == _T('Ô'))
 			sValidName += _T("O");
 		// u family
-		else if (c == _T('�'))
+		else if (c == _T('ü'))
 			sValidName += _T("ue");
-		else if (c == _T('�'))
+		else if (c == _T('Ü'))
 			sValidName += _T("UE");
-		else if (c == _T('�'))
+		else if (c == _T('ù'))
 			sValidName += _T("u");
-		else if (c == _T('U'))
+		else if (c == _T('Ù'))
 			sValidName += _T("U");
-		else if (c == _T('�'))
+		else if (c == _T('ú'))
 			sValidName += _T("u");
-		else if (c == _T('U'))
+		else if (c == _T('Ú'))
 			sValidName += _T("U");
-		else if (c == _T('�'))
+		else if (c == _T('û'))
 			sValidName += _T("u");
-		else if (c == _T('U'))
+		else if (c == _T('Û'))
 			sValidName += _T("U");
 		// others
-		else if (c == _T('�'))
+		else if (c == _T('ç'))
 			sValidName += _T("c");
-		else if (c == _T('�'))
+		else if (c == _T('Ç'))
 			sValidName += _T("C");
-		else if (c == _T('�'))
+		else if (c == _T('ñ'))
 			sValidName += _T("n");
-		else if (c == _T('�'))
+		else if (c == _T('Ñ'))
 			sValidName += _T("N");
-		else if (c == _T('\'') || c == _T('\"') || c == _T('^') || c == _T(''') || c == _T('`'))
+		else if (c == _T('\'') || c == _T('\"') || c == _T('^') || c == _T('´') || c == _T('`'))
 			sValidName += _T("");
 		else
 			sValidName += _T("_");
