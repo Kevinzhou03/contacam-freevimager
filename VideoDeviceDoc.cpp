@@ -1,4 +1,4 @@
-﻿#include "stdafx.h"
+?#include "stdafx.h"
 #include "uImager.h"
 #include "VideoDeviceView.h"
 #include "MainFrm.h"
@@ -4182,96 +4182,96 @@ CString CVideoDeviceDoc::GetValidName(CString sName)
 			 c == _T('(') || c == _T(')'))
 			sValidName += c;
 		// a family
-		else if (c == _T('ä'))
+		else if (c == _T('�'))
 			sValidName += _T("ae");
-		else if (c == _T('Ä'))
+		else if (c == _T('�'))
 			sValidName += _T("AE");
-		else if (c == _T('à'))
+		else if (c == _T('�'))
 			sValidName += _T("a");
-		else if (c == _T('À'))
+		else if (c == _T('A'))
 			sValidName += _T("A");
-		else if (c == _T('á'))
+		else if (c == _T('�'))
 			sValidName += _T("a");
-		else if (c == _T('Á'))
+		else if (c == _T('A'))
 			sValidName += _T("A");
-		else if (c == _T('â'))
+		else if (c == _T('�'))
 			sValidName += _T("a");
-		else if (c == _T('Â'))
+		else if (c == _T('A'))
 			sValidName += _T("A");
-		else if (c == _T('å'))
+		else if (c == _T('�'))
 			sValidName += _T("a");
-		else if (c == _T('Å'))
+		else if (c == _T('�'))
 			sValidName += _T("A");
 		// e family
-		else if (c == _T('è'))
+		else if (c == _T('�'))
 			sValidName += _T("e");
-		else if (c == _T('È'))
+		else if (c == _T('E'))
 			sValidName += _T("E");
-		else if (c == _T('é'))
+		else if (c == _T('�'))
 			sValidName += _T("e");
-		else if (c == _T('É'))
+		else if (c == _T('�'))
 			sValidName += _T("E");
-		else if (c == _T('ê'))
+		else if (c == _T('�'))
 			sValidName += _T("e");
-		else if (c == _T('Ê'))
+		else if (c == _T('E'))
 			sValidName += _T("E");
 		// i family
-		else if (c == _T('ì'))
+		else if (c == _T('�'))
 			sValidName += _T("i");
-		else if (c == _T('Ì'))
+		else if (c == _T('I'))
 			sValidName += _T("I");
-		else if (c == _T('í'))
+		else if (c == _T('�'))
 			sValidName += _T("i");
-		else if (c == _T('Í'))
+		else if (c == _T('I'))
 			sValidName += _T("I");
-		else if (c == _T('î'))
+		else if (c == _T('�'))
 			sValidName += _T("i");
-		else if (c == _T('Î'))
+		else if (c == _T('I'))
 			sValidName += _T("I");
 		// o family
-		else if (c == _T('ö'))
+		else if (c == _T('�'))
 			sValidName += _T("oe");
-		else if (c == _T('Ö'))
+		else if (c == _T('�'))
 			sValidName += _T("OE");
-		else if (c == _T('ò'))
+		else if (c == _T('�'))
 			sValidName += _T("o");
-		else if (c == _T('Ò'))
+		else if (c == _T('O'))
 			sValidName += _T("O");
-		else if (c == _T('ó'))
+		else if (c == _T('�'))
 			sValidName += _T("o");
-		else if (c == _T('Ó'))
+		else if (c == _T('O'))
 			sValidName += _T("O");
-		else if (c == _T('ô'))
+		else if (c == _T('�'))
 			sValidName += _T("o");
-		else if (c == _T('Ô'))
+		else if (c == _T('O'))
 			sValidName += _T("O");
 		// u family
-		else if (c == _T('ü'))
+		else if (c == _T('�'))
 			sValidName += _T("ue");
-		else if (c == _T('Ü'))
+		else if (c == _T('�'))
 			sValidName += _T("UE");
-		else if (c == _T('ù'))
+		else if (c == _T('�'))
 			sValidName += _T("u");
-		else if (c == _T('Ù'))
+		else if (c == _T('U'))
 			sValidName += _T("U");
-		else if (c == _T('ú'))
+		else if (c == _T('�'))
 			sValidName += _T("u");
-		else if (c == _T('Ú'))
+		else if (c == _T('U'))
 			sValidName += _T("U");
-		else if (c == _T('û'))
+		else if (c == _T('�'))
 			sValidName += _T("u");
-		else if (c == _T('Û'))
+		else if (c == _T('U'))
 			sValidName += _T("U");
 		// others
-		else if (c == _T('ç'))
+		else if (c == _T('�'))
 			sValidName += _T("c");
-		else if (c == _T('Ç'))
+		else if (c == _T('�'))
 			sValidName += _T("C");
-		else if (c == _T('ñ'))
+		else if (c == _T('�'))
 			sValidName += _T("n");
-		else if (c == _T('Ñ'))
+		else if (c == _T('�'))
 			sValidName += _T("N");
-		else if (c == _T('\'') || c == _T('\"') || c == _T('^') || c == _T('´') || c == _T('`'))
+		else if (c == _T('\'') || c == _T('\"') || c == _T('^') || c == _T(''') || c == _T('`'))
 			sValidName += _T("");
 		else
 			sValidName += _T("_");
@@ -6876,39 +6876,12 @@ void CVideoDeviceDoc::AddFrameCount(CDib* pDib, const CString& sCount, int nRefF
 							DRAW_BKG_COLOR);
 }
 
-void CVideoDeviceDoc::AddNoDonationTag(CDib* pDib, int nRefFontSize)
+void CVideoDeviceDoc::AddNoDonationTag(CDib* /*pDib*/, int /*nRefFontSize*/)
 {
-	// Check
-	if (!pDib)
-		return;
-
-	// Calc. rectangle
-	CRect rcRect;
-	rcRect.left = 0;
-	rcRect.top = 0;
-	rcRect.right = pDib->GetWidth();
-	rcRect.bottom = pDib->GetHeight();
-
-	// Create font
-	CFont Font;
-	int nFontSize = ScaleFont(rcRect.right, rcRect.bottom, nRefFontSize, FRAMETAG_REFWIDTH, FRAMETAG_REFHEIGHT);
-	LOGFONT lf = {};
-	_tcscpy(lf.lfFaceName, g_szDefaultFontFace);
-	lf.lfHeight = -MulDiv(nFontSize, 96, 72); // use 96 and not GetDeviceCaps(hDC, LOGPIXELSY) otherwise it scales with DPI changes!
-	lf.lfWeight = FW_NORMAL;
-	Font.CreateFontIndirect(&lf);
-
-	// No donation text
-	CString sNoDonation(ML_STRING(1734, "NO DONATION: see Help menu"));
-	if (sNoDonation.GetLength() < 10)
-		sNoDonation = _T("NO DONATION: see Help menu");
-	pDib->AddSingleLineText(sNoDonation,
-							rcRect,
-							&Font,
-							(DT_RIGHT | DT_BOTTOM),
-							NODONATION_MESSAGE_COLOR,
-							OPAQUE,
-							DRAW_BKG_COLOR);
+	// Local GPL build modification: do not render the optional donation reminder.
+	// Donation validation, the license dialog, recording, and codec paths remain
+	// unchanged. This suppresses the reminder in live frames, recordings,
+	// snapshots, thumbnails, and generated GIFs.
 }
 
 // Inspired by https://github.com/Wunkolo/qreverse/
