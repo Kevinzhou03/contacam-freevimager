@@ -1,0 +1,49 @@
+name: Build ContaCam without donation overlay
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+
+      - name: Configure MSBuild
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Build ContaCam
+        shell: pwsh
+        run: |
+          msbuild .\uImager.sln `
+            /m `
+            /t:Build `
+            /p:Configuration=ContaCam `
+            /p:Platform=Win32 `
+            /p:PlatformToolset=v143 `
+            /p:ConfigurationType=Application
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Package build
+        shell: pwsh
+        run: |
+          $artifact = Join-Path $env:GITHUB_WORKSPACE 'artifact'
+          New-Item -ItemType Directory -Force -Path $artifact | Out-Null
+          Copy-Item -Path '.\Bin\ContaCam\*' -Destination $artifact -Recurse -Force
+          Copy-Item -LiteralPath '.\LICENSE.txt' -Destination $artifact -Force
+          @'
+          This is a locally modified ContaCam build based on the official GPL source.
+          The donation reminder rendering was disabled; recording and codec code was not changed.
+          Official source: https://github.com/contaware/contacam-freevimager
+          '@ | Set-Content -LiteralPath (Join-Path $artifact 'BUILD-NOTES.txt') -Encoding UTF8
+          Compress-Archive -Path (Join-Path $artifact '*') -DestinationPath '.\ContaCam-no-donation.zip' -Force
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ContaCam-no-donation-Win32
+          path: .\ContaCam-no-donation.zip
