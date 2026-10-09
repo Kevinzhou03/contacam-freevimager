@@ -24,8 +24,7 @@ jobs:
             /t:Build `
             /p:Configuration=ContaCam `
             /p:Platform=Win32 `
-            /p:PlatformToolset=v143 `
-            /p:ConfigurationType=Application
+            /p:PlatformToolset=v143
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
 
       - name: Package build
