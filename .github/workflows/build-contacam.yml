@@ -33,6 +33,13 @@ jobs:
           $artifact = Join-Path $env:GITHUB_WORKSPACE 'artifact'
           New-Item -ItemType Directory -Force -Path $artifact | Out-Null
           Copy-Item -Path '.\Bin\ContaCam\*' -Destination $artifact -Recurse -Force
+          # ContaCam starts its internal web server from this runtime tree.
+          Copy-Item -LiteralPath '.\microapache' -Destination (Join-Path $artifact 'microapache') -Recurse -Force
+          Copy-Item -LiteralPath '.\Setup\https.crt' -Destination $artifact -Force
+          Copy-Item -LiteralPath '.\Setup\https.key' -Destination $artifact -Force
+          Copy-Item -LiteralPath '.\Setup\MasterConfig.ini' -Destination $artifact -Force
+          Copy-Item -LiteralPath '.\Setup\VC_redist.x86.exe' -Destination $artifact -Force
+          Copy-Item -LiteralPath '.\mail' -Destination (Join-Path $artifact 'mail') -Recurse -Force
           Copy-Item -LiteralPath '.\LICENSE.txt' -Destination $artifact -Force
           @'
           This is a locally modified ContaCam build based on the official GPL source.
